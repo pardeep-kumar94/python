@@ -3,490 +3,312 @@
 
 const BACKEND_CURRICULUM = [
     {
-        id: 1,
-        title: "Module 1: FastAPI Foundations",
-        icon: "🎯",
-        description: "Set up FastAPI, understand ASGI, and build your first API endpoints",
-        lessons: 5,
-        duration: "2 hours",
-        lessons_data: [
+        "id": 1,
+        "title": "Module 1: The Modern Kitchen (Foundations)",
+        "icon": "\ud83d\udc68\u200d\ud83c\udf73",
+        "description": "Start your journey by setting up your FastAPI kitchen and understanding why it's revolutionizing Python web development.",
+        "lessons_data": [
             {
-                id: 1,
-                title: "Why FastAPI? The Modern Backend Revolution",
-                module: "Module 1",
-                story: `<h2>📖 The Story of API Evolution</h2>
-                    <p>Imagine you're running a restaurant. In the old days (Flask/Django), you had ONE waiter serving ALL tables sequentially. If table 5 ordered a slow-cooked meal, everyone else waited!</p>
-                    <p>FastAPI is like having a team of efficient waiters who can serve multiple tables simultaneously (async). When table 5 is waiting for their meal, the waiter helps other tables!</p>
-                    <p>This is why FastAPI is FASTER than Node.js and even Go for certain tasks!</p>`,
-                content: `<h2>What Makes FastAPI Special?</h2>
-                    <p>FastAPI isn't just another Python framework - it's a complete paradigm shift in how we build APIs.</p>
-                    
-                    <div class="story-box">
-                        <div class="box-title">🚀 FastAPI vs The Competition</div>
-                        <ul>
-                            <li><strong>vs Flask:</strong> 3-4x faster, automatic validation, auto docs</li>
-                            <li><strong>vs Django REST:</strong> Lighter, async native, modern Python</li>
-                            <li><strong>vs Node.js Express:</strong> Comparable speed, but with Python!</li>
-                            <li><strong>vs Go:</strong> Easier to learn, faster development</li>
-                        </ul>
-                    </div>
-
-                    <h3>Key Features</h3>
-                    <div class="code-block">
-                        <div class="code-header">
-                            <span class="code-language">FastAPI Advantages</span>
-                        </div>
-                        <pre><code>✅ Automatic API documentation (Swagger + ReDoc)
-✅ Data validation using Pydantic
-✅ Async/await support (true concurrency) 
-✅ Type hints for better IDE support
-✅ OAuth2, JWT authentication built-in
-✅ WebSockets support
-✅ GraphQL support
-✅ Dependency injection system</code></pre>
-                    </div>
-
-                    <div class="memory-box">
-                        <div class="box-title">🧠 How FastAPI Achieves Speed</div>
-                        <ol>
-                            <li><strong>Starlette:</strong> Ultra-fast ASGI framework underneath</li>
-                            <li><strong>Pydantic:</strong> Rust-powered validation (C bindings)</li>
-                            <li><strong>Async/Await:</strong> Non-blocking I/O operations</li>
-                            <li><strong>Type Hints:</strong> Compiled optimizations possible</li>
-                        </ol>
-                        <p>Result: 20,000-30,000 requests/second vs Flask's 5,000-8,000!</p>
-                    </div>
-
-                    <h3>Real-World Use Cases</h3>
-                    <div class="tip-box">
-                        <div class="box-title">💡 Where FastAPI Shines</div>
-                        <ul>
-                            <li>🤖 <strong>ML/AI APIs:</strong> Serve machine learning models</li>
-                            <li>📱 <strong>Mobile Backends:</strong> Power iOS/Android apps</li>
-                            <li>🎮 <strong>Real-time Apps:</strong> Chat, gaming, live updates</li>
-                            <li>🏢 <strong>Microservices:</strong> Modern cloud architecture</li>
-                            <li>📊 <strong>Data APIs:</strong> Serve analytics and dashboards</li>
-                        </ul>
-                    </div>`
+                "id": 1,
+                "title": "The Story of API Evolution",
+                "module": "Module 1",
+                "story": "<h2>\ud83d\udcd6 The Tale of Three Restaurants</h2>\n                    <p>Imagine the history of Python web frameworks as the evolution of restaurants in a busy city.</p>\n                    \n                    <div class=\"story-box\">\n                        <h3>1. The Flask Tavern (Synchronous)</h3>\n                        <p>In the beginning, there was Flask. It was simple and loved. But it had one waiter (the thread). If a customer ordered a slow-cooked stew (a database query), the waiter would stand by the kitchen door, frozen, waiting for the stew. Meanwhile, new customers lined up outside, ignored.</p>\n                        <p><strong>Problem:</strong> One slow task blocked everyone else.</p>\n                    </div>\n\n                    <div class=\"story-box\">\n                        <h3>2. The Node.js Bistro (Callbacks)</h3>\n                        <p>Across the street, the Node.js Bistro opened. Their waiters were hyper-active. They took an order, ran to the kitchen, shouted it, and immediately ran back to take new orders. When the food was ready, a bell rang (callback). It was chaotic but fast.</p>\n                        <p><strong>Problem:</strong> The \"Callback Hell\" kitchen was messy and hard to organize.</p>\n                    </div>\n\n                    <div class=\"story-box\">\n                        <h3>3. The FastAPI Kitchen (Modern Async)</h3>\n                        <p>Then came FastAPI. It adopted the modern `async/await` system. Waiters are highly organized. They take an order, digitally log it (await), and instantly turn to the next customer. The system handles the waiting.</p>\n                        <p>But FastAPI did something more: It hired a strict Health Inspector named <strong>Pydantic</strong>. Before any ingredient (data) enters the kitchen, it is rigorously checked. No rotten tomatoes (wrong data types) ever reach the pot.</p>\n                    </div>",
+                "content": "<h2>What Makes FastAPI Special?</h2>\n                    <p>FastAPI combines the best of all worlds: the speed of Node.js/Go and the simplicity of Python.</p>\n                    \n                    <h3>Key Superpowers</h3>\n                    <ul>\n                        <li><strong>\ud83d\ude80 Speed:</strong> High performance, on par with NodeJS and Go (thanks to Starlette and Pydantic).</li>\n                        <li><strong>\ud83d\udee1\ufe0f Data Validation:</strong> Automatic validation using Python type hints.</li>\n                        <li><strong>\ud83d\udcda Documentation:</strong> Automatic interactive API docs (Swagger UI) generated from your code.</li>\n                        <li><strong>\ud83d\udd0c Standards-based:</strong> Based on (and fully compatible with) the open standards for APIs: OpenAPI and JSON Schema.</li>\n                    </ul>\n\n                    <div class=\"tip-box\">\n                        <div class=\"box-title\">Why \"Fast\"?</div>\n                        <p>It's fast to <em>run</em> (performance) but also fast to <em>code</em> (developer speed). It reduces bugs by approx 40%.</p>\n                    </div>\n\n                    <h3>The Components</h3>\n                    <p>FastAPI stands on the shoulders of giants:</p>\n                    <ul>\n                        <li><strong>Starlette:</strong> For the web parts (routing, async).</li>\n                        <li><strong>Pydantic:</strong> For the data parts (validation, serialization).</li>\n                        <li><strong>Uvicorn:</strong> The lightning-fast ASGI server that runs your app.</li>\n                    </ul>"
             },
             {
-                id: 2,
-                title: "Installation & Your First API",
-                module: "Module 1",
-                content: `<h2>Setting Up FastAPI</h2>
-                    
-                    <h3>Step 1: Create Virtual Environment</h3>
-                    <div class="code-block">
-                        <div class="code-header">
-                            <span class="code-language">Terminal</span>
-                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
-                        </div>
-                        <pre><code class="language-bash"># Create project directory
-mkdir fastapi-project
-cd fastapi-project
-
-# Create virtual environment
-python -m venv venv
-
-# Activate it
-# On Mac/Linux:
-source venv/bin/activate
-# On Windows:
-venv\\Scripts\\activate</code></pre>
-                    </div>
-
-                    <h3>Step 2: Install FastAPI + Uvicorn</h3>
-                    <div class="code-block">
-                        <div class="code-header">
-                            <span class="code-language">Terminal</span>
-                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
-                        </div>
-                        <pre><code class="language-bash"># Install FastAPI and ASGI server
-pip install fastapi uvicorn[standard]
-
-# For development, also install:
-pip install python-multipart  # For file uploads
-pip install python-jose[cryptography]  # For JWT
-pip install passlib[bcrypt]  # For passwords</code></pre>
-                    </div>
-
-                    <h3>Step 3: Your First API! 🎉</h3>
-                    <div class="code-block">
-                        <div class="code-header">
-                            <span class="code-language">Python (main.py)</span>
-                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
-                        </div>
-                        <pre><code class="language-python">from fastapi import FastAPI
-
-# Create FastAPI instance
-app = FastAPI()
-
-# Your first endpoint!
-@app.get("/")
-def read_root():
-    return {"message": "Hello, FastAPI!"}
-
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: str = None):
-    return {"item_id": item_id, "q": q}</code></pre>
-                    </div>
-
-                    <h3>Step 4: Run Your API</h3>
-                    <div class="code-block">
-                        <div class="code-header">
-                            <span class="code-language">Terminal</span>
-                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
-                        </div>
-                        <pre><code class="language-bash"># Start the server
-uvicorn main:app --reload
-
-# Output:
-# INFO:     Uvicorn running on http://127.0.0.1:8000
-# INFO:     Application startup complete.</code></pre>
-                    </div>
-
-                    <div class="tip-box">
-                        <div class="box-title">💡 Visit These URLs!</div>
-                        <ul>
-                            <li>📍 <strong>http://127.0.0.1:8000</strong> - Your API</li>
-                            <li>📚 <strong>http://127.0.0.1:8000/docs</strong> - Swagger UI (Interactive docs!)</li>
-                            <li>📖 <strong>http://127.0.0.1:8000/redoc</strong> - ReDoc (Alternative docs)</li>
-                        </ul>
-                        <p>The docs are AUTO-GENERATED! 🤯 You just wrote an API with professional documentation!</p>
-                    </div>
-
-                    <div class="memory-box">
-                        <div class="box-title">🧠 What Just Happened?</div>
-                        <ol>
-                            <li><strong>FastAPI():</strong> Creates ASGI application instance</li>
-                            <li><strong>@app.get("/"):</strong> Decorator registers GET endpoint</li>
-                            <li><strong>Type hints (item_id: int):</strong> Auto validation!</li>
-                            <li><strong>Uvicorn:</strong> ASGI server runs your app</li>
-                            <li><strong>--reload:</strong> Auto-restart on code changes</li>
-                        </ol>
-                    </div>`
+                "id": 2,
+                "title": "Setting Up Your Station",
+                "module": "Module 1",
+                "story": "<h2>\ud83d\udee0\ufe0f Preparing the Kitchen</h2>\n                    <p>Before a chef can cook, they must sharpen their knives and organize their station (Mise en place). In Python, this means removing the clutter of global installations and creating a clean, dedicated workspace: the <strong>Virtual Environment</strong>.</p>\n                    <p>Think of the Virtual Environment as a private kitchen where your ingredients (libraries) don't mix with the restaurant next door.</p>",
+                "content": "<h2>Installation Guide</h2>\n                    <p>We need two main ingredients: <strong>FastAPI</strong> (the framework) and <strong>Uvicorn</strong> (the server).</p>\n\n                    <h3>Step 1: Create a Virtual Environment</h3>\n                    <div class=\"code-block\">\n                        <div class=\"code-header\">Terminal</div>\n                        <pre><code># Create the environment\npython3 -m venv venv\n\n# Activate it (Mac/Linux)\nsource venv/bin/activate\n\n# Activate it (Windows)\nvenv\\Scripts\\activate</code></pre>\n                    </div>\n\n                    <h3>Step 2: Install the Tools</h3>\n                    <div class=\"code-block\">\n                        <div class=\"code-header\">Terminal</div>\n                        <pre><code>pip install fastapi \"uvicorn[standard]\"</code></pre>\n                    </div>\n                    <p>Note: The <code>[standard]</code> part installs extra dependencies like `uvloop` (for speed) and `watchfiles` (for auto-reloading).</p>\n\n                    <div class=\"warning-box\">\n                        <div class=\"box-title\">Common Mistake</div>\n                        <p>Don't call your file <code>fastapi.py</code>! This will confuse Python when it tries to import the library. Name it <code>main.py</code> or <code>app.py</code>.</p>\n                    </div>"
             },
             {
-                id: 3,
-                title: "Path Parameters & Query Parameters",
-                module: "Module 1",
-                content: `<h2>Understanding Request Parameters</h2>
-                    
-                    <h3>Path Parameters (URL Variables)</h3>
-                    <div class="code-block">
-                        <div class="code-header">
-                            <span class="code-language">Python</span>
-                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
-                        </div>
-                        <pre><code class="language-python">from fastapi import FastAPI
-
-app = FastAPI()
-
-@app.get("/users/{user_id}")
-def get_user(user_id: int):
-    return {"user_id": user_id}
-
-# URL: /users/42  → {"user_id": 42}
-
-@app.get("/users/{user_id}/posts/{post_id}")
-def get_user_post(user_id: int, post_id: int):
-    return {"user_id": user_id, "post_id": post_id}
-
-# URL: /users/42/posts/7 → {"user_id": 42, "post_id": 7}</code></pre>
-                    </div>
-
-                    <h3>Query Parameters (?key=value)</h3>
-                    <div class="code-block">
-                        <div class="code-header">
-                            <span class="code-language">Python</span>
-                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
-                        </div>
-                        <pre><code class="language-python">@app.get("/items")
-def list_items(skip: int = 0, limit: int = 10):
-    return {"skip": skip, "limit": limit}
-
-# URL: /items?skip=20&limit=5
-# Returns: {"skip": 20, "limit": 5}
-
-# Optional parameters
-@app.get("/search")
-def search(q: str = None, category: str = None):
-    return {"query": q, "category": category}
-
-# URL: /search?q=laptop  → {"query": "laptop", "category": null}</code></pre>
-                    </div>
-
-                    <h3>Combining Both</h3>
-                    <div class="code-block">
-                        <div class="code-header">
-                            <span class="code-language">Python</span>
-                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
-                        </div>
-                        <pre><code class="language-python">@app.get("/users/{user_id}/items")
-def get_user_items(user_id: int, skip: int = 0, limit: int = 10):
-    return {
-        "user_id": user_id,
-        "skip": skip,
-        "limit": limit
-    }
-
-# URL: /users/42/items?skip=10&limit=20</code></pre>
-                    </div>
-
-                    <div class="story-box">
-                        <div class="box-title">🎭 Auto-Validation Magic!</div>
-                        <p>If you visit /users/abc instead of /users/42, FastAPI automatically returns:</p>
-                        <pre><code>{
-  "detail": [
-    {
-      "loc": ["path", "user_id"],
-      "msg": "value is not a valid integer",
-      "type": "type_error.integer"
-    }
-  ]
-}</code></pre>
-                        <p>You didn't write ANY validation code! FastAPI did it for you! 🎉</p>
-                    </div>`
+                "id": 3,
+                "title": "The First Dish (Hello World)",
+                "module": "Module 1",
+                "story": "<h2>\ud83e\udd57 The Appetizer</h2>\n                    <p>Every great meal starts with a simple appetizer. In programming, this is the \"Hello World\". It proves your kitchen is operational, the gas is on, and the chef is ready.</p>\n                    <p>We are going to create an API endpoint. Think of an <strong>Endpoint</strong> as a menu item. When a customer points to \"Item #1\" on the menu (the URL), the kitchen prepares that specific dish.</p>",
+                "content": "<h2>Your First API</h2>\n                    <p>Create a file named <code>main.py</code> and add this code:</p>\n\n                    <div class=\"code-block\">\n                        <div class=\"code-header\">main.py</div>\n                        <pre><code>from fastapi import FastAPI\n\n# 1. Initialize the App (The Kitchen)\napp = FastAPI()\n\n# 2. Define a Path Operation (The Menu Item)\n@app.get(\"/\")\nasync def root():\n    # 3. Return the Content (The Dish)\n    return {\"message\": \"Hello World\"}</code></pre>\n                    </div>\n\n                    <h3>Breaking it Down</h3>\n                    <ul>\n                        <li><code>@app.get(\"/\")</code>: This decorator tells FastAPI that the function below handles <strong>GET</strong> requests to the path <code>/</code>.</li>\n                        <li><code>async def</code>: Defines an asynchronous function.</li>\n                        <li><code>return dict</code>: FastAPI automatically converts Python dictionaries to JSON.</li>\n                    </ul>\n\n                    <h3>Serving the Dish</h3>\n                    <p>Unlike standard Python scripts, you don't run this with `python main.py`. You need a server (Uvicorn) to serve it.</p>\n                    <div class=\"code-block\">\n                        <div class=\"code-header\">Terminal</div>\n                        <pre><code>uvicorn main:app --reload</code></pre>\n                    </div>\n                    <ul>\n                        <li><code>main</code>: The file `main.py`.</li>\n                        <li><code>app</code>: The object created inside of `main.py` with `app = FastAPI()`.</li>\n                        <li><code>--reload</code>: Makes the server restart after code changes. Only use for development.</li>\n                    </ul>\n\n                    <div class=\"memory-box\">\n                        <div class=\"box-title\">Check the Docs!</div>\n                        <p>Go to <a href=\"http://127.0.0.1:8000/docs\" target=\"_blank\">http://127.0.0.1:8000/docs</a>. You will see the automatic interactive API documentation (Swagger UI). It's magic! \u2728</p>\n                    </div>"
             },
             {
-                id: 4,
-                title: "Request Body & Pydantic Models",
-                module: "Module 1",
-                content: `<h2>Handling POST Requests with Data Validation</h2>
-                    
-                    <h3>Pydantic Models (Data Schemas)</h3>
-                    <div class="code-block">
-                        <div class="code-header">
-                            <span class="code-language">Python</span>
-                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
-                        </div>
-                        <pre><code class="language-python">from fastapi import FastAPI
-from pydantic import BaseModel, EmailStr
-from typing import Optional
-
-app = FastAPI()
-
-# Define data model
-class User(BaseModel):
-    username: str
-    email: EmailStr
-    full_name: Optional[str] = None
-    age: int
-
-@app.post("/users")
-def create_user(user: User):
-    return {
-        "message": "User created",
-        "user": user
-    }</code></pre>
-                    </div>
-
-                    <div class="tip-box">
-                        <div class="box-title">💡 Test with cURL or Postman</div>
-                        <pre><code>POST http://127.0.0.1:8000/users
-Content-Type: application/json
-
-{
-  "username": "johndoe",
-  "email": "john@example.com",
-  "full_name": "John Doe", 
-  "age": 30
-}</code></pre>
-                    </div>
-
-                    <h3>Advanced Validation</h3>
-                    <div class="code-block">
-                        <div class="code-header">
-                            <span class="code-language">Python</span>
-                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
-                        </div>
-                        <pre><code class="language-python">from pydantic import BaseModel, Field, validator
-
-class Product(BaseModel):
-    name: str = Field(..., min_length=1, max_length=100)
-    price: float = Field(..., gt=0, description="Price must be greater than 0")
-    quantity: int = Field(default=1, ge=1, le=1000)
-    
-    @validator('name')
-    def name_must_not_be_empty(cls, v):
-        if not v.strip():
-            raise ValueError('name cannot be empty')
-        return v
-
-@app.post("/products")
-def create_product(product: Product):
-    return product</code></pre>
-                    </div>`
+                "id": 4,
+                "title": "Specific Orders (Path Parameters)",
+                "module": "Module 1",
+                "story": "<h2>\ud83c\udf54 \"I'll have the #5\"</h2>\n                    <p>A menu isn't just one item. Customers want variety. They don't just say \"Give me food\", they say \"Give me Burger #5\".</p>\n                    <p>In APIs, this is a <strong>Path Parameter</strong>. It's a variable part of the URL path that acts like a specific identifier for a resource.</p>",
+                "content": "<h2>Implementing Path Parameters</h2>\n                    <p>You can declare path \"parameters\" or \"variables\" with the same syntax used by Python format strings.</p>\n\n                    <div class=\"code-block\">\n                        <div class=\"code-header\">main.py</div>\n                        <pre><code>@app.get(\"/items/{item_id}\")\nasync def read_item(item_id: int):\n    return {\"item_id\": item_id}</code></pre>\n                    </div>\n\n                    <h3>Type Validation (Pydantic Magic)</h3>\n                    <p>Notice <code>item_id: int</code>? This is a Python type hint. FastAPI uses it to validate data.</p>\n                    <ul>\n                        <li>If you go to <code>/items/5</code> -> You get <code>{\"item_id\": 5}</code> (as an integer).</li>\n                        <li>If you go to <code>/items/foo</code> -> You get a nice error saying \"value is not a valid integer\".</li>\n                    </ul>\n\n                    <div class=\"tip-box\">\n                        <div class=\"box-title\">Order Matters</div>\n                        <p>If you have paths like <code>/users/me</code> and <code>/users/{user_id}</code>, you must define <code>/users/me</code> <strong>first</strong>. Otherwise, `{user_id}` will match \"me\" and try to convert it to an integer!</p>\n                    </div>"
             },
             {
-                id: 5,
-                title: "Response Models & Status Codes",
-                module: "Module 1",
-                hasQuiz: true,
-                content: `<h2>Professional API Responses</h2>
-                    
-                    <h3>Response Models</h3>
-                    <div class="code-block">
-                        <div class="code-header">
-                            <span class="code-language">Python</span>
-                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
-                        </div>
-                        <pre><code class="language-python">from fastapi import FastAPI, status
-from pydantic import BaseModel
-
-app = FastAPI()
-
-class UserIn(BaseModel):
-    username: str
-    password: str
-    email: str
-
-class UserOut(BaseModel):
-    username: str
-    email: str
-    # Password excluded!
-
-@app.post("/users", response_model=UserOut, status_code=status.HTTP_201_CREATED)
-def create_user(user: UserIn):
-    # Save user to database...
-    return user  # Password automatically filtered out!</code></pre>
-                    </div>
-
-                    <h3>Status Codes</h3>
-                    <div class="code-block">
-                        <div class="code-header">
-                            <span class="code-language">Python</span>
-                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
-                        </div>
-                        <pre><code class="language-python">from fastapi import FastAPI, HTTPException, status
-
-@app.get("/items/{item_id}")
-def get_item(item_id: int):
-    if item_id not in database:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail="Item not found"
-        )
-    return database[item_id]
-
-# Common status codes:
-# 200: OK
-# 201: Created
-# 204: No Content
-# 400: Bad Request
-# 401: Unauthorized
-# 403: Forbidden
-# 404: Not Found
-# 500: Internal Server Error</code></pre>
-                    </div>
-
-                    <h3>Module 1 Complete! 🎉</h3>
-                    <p>You can now:</p>
-                    <ul>
-                        <li>✅ Build basic APIs with FastAPI</li>
-                        <li>✅ Handle path and query parameters</li>
-                        <li>✅ Validate request bodies with Pydantic</li>
-                        <li>✅ Return proper HTTP status codes</li>
-                        <li>✅ Filter response data with response models</li>
-                    </ul>
-                    <p>Next up: Databases! We'll connect FastAPI to real databases!</p>`
+                "id": 5,
+                "title": "Special Requests (Query Parameters)",
+                "module": "Module 1",
+                "story": "<h2>\ud83c\udf5f \"With extra salt\"</h2>\n                    <p>Sometimes customers want to modify their order. \"I want the burger, but <em>extra crispy</em> and <em>hold the onions</em>.\"</p>\n                    <p>These are optional modifications to the main request. In web APIs, we use <strong>Query Parameters</strong> for this. They appear at the end of the URL after `?`, like `?crispy=true&onion=false`.</p>",
+                "content": "<h2>Query Parameters</h2>\n                    <p>When you declare other function parameters that are not part of the path parameters, they are automatically interpreted as \"query\" parameters.</p>\n\n                    <div class=\"code-block\">\n                        <div class=\"code-header\">main.py</div>\n                        <pre><code>fake_items_db = [{\"item_name\": \"Foo\"}, {\"item_name\": \"Bar\"}, {\"item_name\": \"Baz\"}]\n\n@app.get(\"/items/\")\nasync def read_item(skip: int = 0, limit: int = 10):\n    return fake_items_db[skip : skip + limit]</code></pre>\n                    </div>\n\n                    <p>Now you can call: <code>http://127.0.0.1:8000/items/?skip=0&limit=2</code></p>\n\n                    <h3>Defaults and Optionals</h3>\n                    <p>Because we provided default values (`= 0`, `= 10`), the parameters are optional. If the user visits just <code>/items/</code>, they get the defaults.</p>\n                    \n                    <p>You can also create optional parameters using standard Python typing:</p>\n                    <pre><code>from typing import Optional\n\n@app.get(\"/items/{item_id}\")\nasync def read_item(item_id: str, q: Optional[str] = None):\n    if q:\n        return {\"item_id\": item_id, \"q\": q}\n    return {\"item_id\": item_id}</code></pre>\n                    \n                    <div class=\"memory-box\">\n                        <div class=\"box-title\">Rule of Thumb</div>\n                        <p><strong>Path Parameters</strong>: Identifies a specific resource (Essential).<br>\n                        <strong>Query Parameters</strong>: Sorts, filters, or paginates that resource (Optional).</p>\n                    </div>"
             }
         ]
     },
     {
-        id: 2,
-        title: "Module 2: Databases & ORMs",
-        icon: "💾",
-        description: "Connect to databases using SQLAlchemy, create models, and perform CRUD operations",
-        lessons: 6,
-        duration: "3 hours",
-        lessons_data: [
-            { id: 6, title: "SQLAlchemy Setup & Connection", module: "Module 2", content: `<h2>Database Setup</h2><div class="code-block"><div class="code-header"><span class="code-language">Terminal</span></div><pre><code>pip install sqlalchemy databases[sqlite]\npip install alembic</code></pre></div><div class="code-block"><div class="code-header"><span class="code-language">Python (database.py)</span></div><pre><code>from sqlalchemy import create_engine\nfrom sqlalchemy.ext.declarative import declarative_base\nfrom sqlalchemy.orm import sessionmaker\n\nDATABASE_URL = "sqlite:///./test.db"\n\nengine = create_engine(DATABASE_URL)\nSessionLocal = sessionmaker(bind=engine)\nBase = declarative_base()\n\ndef get_db():\n    db = SessionLocal()\n    try:\n        yield db\n    finally:\n        db.close()</code></pre></div>` },
-            { id: 7, title: "Database Models & Relationships", module: "Module 2", content: `<h2>Creating Models</h2><div class="code-block"><div class="code-header"><span class="code-language">Python</span></div><pre><code>from sqlalchemy import Column, Integer, String, ForeignKey\nfrom sqlalchemy.orm import relationship\n\nclass User(Base):\n    __tablename__ = "users"\n    id = Column(Integer, primary_key=True)\n    email = Column(String, unique=True)\n    posts = relationship("Post")\n\nclass Post(Base):\n    __tablename__ = "posts"\n    id = Column(Integer, primary_key=True)\n    title = Column(String)\n    user_id = Column(Integer, ForeignKey("users.id"))</code></pre></div>` },
-            { id: 8, title: "CRUD Operations", module: "Module 2", content: `<h2>Database Operations</h2><div class="code-block"><div class="code-header"><span class="code-language">Python</span></div><pre><code>@app.post("/users/")\ndef create_user(user: UserCreate, db: Session = Depends(get_db)):\n    db_user = User(email=user.email)\n    db.add(db_user)\n    db.commit()\n    return db_user\n\n@app.get("/users/")\ndef read_users(db: Session = Depends(get_db)):\n    return db.query(User).all()\n\n@app.delete("/users/{user_id}")\ndef delete_user(user_id: int, db: Session = Depends(get_db)):\n    user = db.query(User).filter(User.id == user_id).first()\n    db.delete(user)\n    db.commit()\n    return {"deleted": True}</code></pre></div>` },
-            { id: 9, title: "Database Migrations with Alembic", module: "Module 2", content: `<h2>Alembic Migrations</h2><div class="code-block"><div class="code-header"><span class="code-language">Terminal</span></div><pre><code>alembic init alembic\nalembic revision --autogenerate -m "init"\nalembic upgrade head</code></pre></div>` },
-            { id: 10, title: "Async Database Operations", module: "Module 2", content: `<h2>Async SQLAlchemy</h2><div class="code-block"><div class="code-header"><span class="code-language">Python</span></div><pre><code>from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession\n\n@app.get("/users/")\nasync def read_users(db: AsyncSession = Depends(get_db)):\n    result = await db.execute(select(User))\n    return result.scalars().all()</code></pre></div>` },
-            { id: 11, title: "Query Optimization & Pagination", module: "Module 2", hasQuiz: true, content: `<h2>Efficient Queries</h2><div class="code-block"><div class="code-header"><span class="code-language">Python</span></div><pre><code>@app.get("/posts/")\ndef get_posts(page: int = 1, size: int = 10, db: Session = Depends(get_db)):\n    skip = (page - 1) * size\n    posts = db.query(Post).offset(skip).limit(size).all()\n    total = db.query(Post).count()\n    return {"items": posts, "total": total, "pages": total//size + 1}</code></pre></div><h3>Module 2 Complete! 🎉</h3>` }
+        "id": 2,
+        "title": "Module 2: The Inspection Station (Validation)",
+        "icon": "\ud83d\udee1\ufe0f",
+        "description": "Learn how to receive data securely using Pydantic models to ensure your kitchen never cooks with bad ingredients.",
+        "lessons_data": [
+            {
+                "id": 6,
+                "title": "The Bouncer (Request Body)",
+                "module": "Module 2",
+                "story": "<h2>\ud83d\udce6 The Delivery Truck</h2>\n                    <p>GET requests are for asking for data. But to <em>send</em> data (like creating a new user or posting a tweet), we need to send a package. This package is the <strong>Request Body</strong>.</p>\n                    <p>However, you can't just let any truck dump cargo in your kitchen. You need a Bouncer at the loading dock to inspect the manifest. This Bouncer is <strong>Pydantic</strong>.</p>",
+                "content": "<h2>Sending Data with Pydantic</h2>\n                    <p>To expect a request body, you define a Pydantic Model. This model describes exactly what your data should look like.</p>\n\n                    <div class=\"code-block\">\n                        <div class=\"code-header\">main.py</div>\n                        <pre><code>from typing import Optional\nfrom fastapi import FastAPI\nfrom pydantic import BaseModel\n\nclass Item(BaseModel):\n    name: str\n    description: Optional[str] = None\n    price: float\n    tax: Optional[float] = None\n\napp = FastAPI()\n\n@app.post(\"/items/\")\nasync def create_item(item: Item):\n    return item</code></pre>\n                    </div>\n\n                    <h3>What just happened?</h3>\n                    <ol>\n                        <li>We created a class inheriting from `BaseModel`.</li>\n                        <li>We defined typed fields. `name` is required (no default). `description` is optional.</li>\n                        <li>We added it as a parameter to the path operation.</li>\n                    </ol>\n\n                    <p>FastAPI will now:</p>\n                    <ul>\n                        <li>Read the body as JSON.</li>\n                        <li>Convert types (if you send \"price\": \"5.5\", it converts to float).</li>\n                        <li>Validate data (if \"name\" is missing, it returns 422 Error).</li>\n                        <li>Give you specific editor support (autocomplete) inside the function.</li>\n                    </ul>"
+            },
+            {
+                "id": 7,
+                "title": "Validation Rules (Field)",
+                "module": "Module 2",
+                "story": "<h2>\ud83d\udccf Strict Standards</h2>\n                    <p>Just saying \"name must be a string\" isn't enough. What if someone sends a name that is 10,000 characters long? Or a price of -50 dollars?</p>\n                    <p>We need strict quality control. Pydantic's <code>Field</code> allows us to enforce rules like min_length, max_length, and regex patterns.</p>",
+                "content": "<h2>Using Field for Validation</h2>\n                    <p>You can customize validation by using `Field` directly in your Pydantic models.</p>\n\n                    <div class=\"code-block\">\n                        <div class=\"code-header\">main.py</div>\n                        <pre><code>from pydantic import BaseModel, Field\n\nclass Item(BaseModel):\n    name: str = Field(..., min_length=3, max_length=50, title=\"The name of the item\")\n    description: Optional[str] = Field(None, max_length=300)\n    price: float = Field(..., gt=0, description=\"The price must be greater than zero\")\n    tags: list[str] = []</code></pre>\n                    </div>\n\n                    <ul>\n                        <li><code>...</code> (Ellipsis): Means the field is REQUIRED.</li>\n                        <li><code>gt=0</code>: Greater than 0.</li>\n                        <li><code>min_length=3</code>: String must be at least 3 chars.</li>\n                    </ul>\n\n                    <div class=\"tip-box\">\n                        <div class=\"box-title\">Why Validation Matters</div>\n                        <p>This validation happens BEFORE your code runs. You don't need to write `if price < 0: return error`. FastAPI handles it automatically and returns a standardized error response.</p>\n                    </div>"
+            },
+            {
+                "id": 8,
+                "title": "Nested Models (Complex Data)",
+                "module": "Module 2",
+                "story": "<h2>\ud83d\udce6 Boxes inside Boxes</h2>\n                    <p>Real-world data is rarely flat. An 'Order' contains a 'User', which contains an 'Address', which contains a 'City'.</p>\n                    <p>Pydantic handles these Russian Nesting Dolls effortlessly. You can use models as types inside other models.</p>",
+                "content": "<h2>Defining Nested Structures</h2>\n                    <p>Simply define a model and use it as a type hint for an attribute in another model.</p>\n\n                    <div class=\"code-block\">\n                        <div class=\"code-header\">main.py</div>\n                        <pre><code>class Image(BaseModel):\n    url: str\n    name: str\n\nclass Item(BaseModel):\n    name: str\n    description: Optional[str] = None\n    image: Optional[Image] = None  # Nested Model\n\n@app.put(\"/items/{item_id}\")\nasync def update_item(item_id: int, item: Item):\n    results = {\"item_id\": item_id, \"item\": item}\n    return results</code></pre>\n                    </div>\n\n                    <p>FastAPI expects a JSON body like:</p>\n                    <pre><code>{\n    \"name\": \"Foo\",\n    \"image\": {\n        \"url\": \"http://example.com/baz.jpg\",\n        \"name\": \"The Foo Image\"\n    }\n}</code></pre>\n\n                    <h3>Lists of Models</h3>\n                    <p>You can also define lists of sub-models:</p>\n                    <pre><code>images: list[Image] = []</code></pre>\n                    <p>This would expect an array of image objects.</p>"
+            },
+            {
+                "id": 9,
+                "title": "Response Models (The Presentation)",
+                "module": "Module 2",
+                "story": "<h2>\ud83c\udf7d\ufe0f Plating the Dish</h2>\n                    <p>Your kitchen might capture lots of data: internal IDs, hashed passwords, creation dates. But you shouldn't serve ALL of that to the customer!</p>\n                    <p>The <strong>Response Model</strong> is like the plating process. It filters the raw data from the pot and arranges only what the customer should see on the plate.</p>",
+                "content": "<h2>Filtering Data with Response Models</h2>\n                    <p>You define the `response_model` parameter in the decorator. FastAPI will use this model to filter and convert the return data.</p>\n\n                    <div class=\"code-block\">\n                        <div class=\"code-header\">main.py</div>\n                        <pre><code>class UserIn(BaseModel):\n    username: str\n    password: str\n    email: str\n\nclass UserOut(BaseModel):\n    username: str\n    email: str\n    # Password is EXCLUDED\n\n@app.post(\"/user/\", response_model=UserOut)\nasync def create_user(user: UserIn):\n    # Imagine we save the user to DB here\n    return user</code></pre>\n                    </div>\n\n                    <p>Even though our function returns the `user` object (which contains the password), FastAPI sees the `response_model=UserOut` and automatically removes the password field before sending the JSON response.</p>\n\n                    <div class=\"warning-box\">\n                        <div class=\"box-title\">Security Critical!</div>\n                        <p>Always use Response Models to prevent accidental data leaks (like exposing passwords or internal private keys).</p>\n                    </div>"
+            },
+            {
+                "id": 10,
+                "title": "Handling Errors (The Apology)",
+                "module": "Module 2",
+                "story": "<h2>\ud83d\uded1 \"We're out of soup\"</h2>\n                    <p>Sometimes things go wrong. The item isn't found, the user isn't allowed, or the server detects an issue.</p>\n                    <p>In APIs, we communicate this with <strong>HTTP Status Codes</strong> and Error details. We don't just crash; we politely explain the problem.</p>",
+                "content": "<h2>HTTPException</h2>\n                    <p>To return an error to the client, use `HTTPException`.</p>\n\n                    <div class=\"code-block\">\n                        <div class=\"code-header\">main.py</div>\n                        <pre><code>from fastapi import FastAPI, HTTPException\n\nitems = {\"foo\": \"The Foo Wrestlers\"}\n\n@app.get(\"/items/{item_id}\")\nasync def read_item(item_id: str):\n    if item_id not in items:\n        raise HTTPException(status_code=404, detail=\"Item not found\")\n    return {\"item\": items[item_id]}</code></pre>\n                    </div>\n\n                    <h3>Common Status Codes</h3>\n                    <ul>\n                        <li><strong>200 OK:</strong> Request succeeded.</li>\n                        <li><strong>201 Created:</strong> Resource created successfully (use for POST).</li>\n                        <li><strong>400 Bad Request:</strong> Client sent invalid data.</li>\n                        <li><strong>401 Unauthorized:</strong> User needs to log in.</li>\n                        <li><strong>403 Forbidden:</strong> User is logged in but doesn't have permission.</li>\n                        <li><strong>404 Not Found:</strong> Resource doens't exist.</li>\n                        <li><strong>500 Internal Server Error:</strong> Your code broke.</li>\n                    </ul>\n\n                    <p>You can also set the status code for success:</p>\n                    <pre><code>@app.post(\"/items/\", status_code=201)</code></pre>"
+            }
         ]
     },
     {
-        id: 3,
-        title: "Module 3: Authentication & Security",
-        icon: "🔐",
-        description: "Implement JWT authentication, OAuth2, password hashing, and API security",
-        lessons: 6,
-        duration: "3 hours",
-        lessons_data: [
-            { id: 12, title: "Password Hashing with Passlib", module: "Module 3", content: `<h2>Secure Passwords</h2><div class="code-block"><div class="code-header"><span class="code-language">Python</span></div><pre><code>from passlib.context import CryptContext\n\npwd_context = CryptContext(schemes=["bcrypt"])\n\ndef hash_password(password: str):\n    return pwd_context.hash(password)\n\ndef verify_password(plain, hashed):\n    return pwd_context.verify(plain, hashed)</code></pre></div>` },
-            { id: 13, title: "JWT Tokens - Creation & Validation", module: "Module 3", content: `<h2>JWT Authentication</h2><div class="code-block"><div class="code-header"><span class="code-language">Python</span></div><pre><code>from jose import JWTError, jwt\nfrom datetime import datetime, timedelta\n\nSECRET_KEY = "your-secret-key"\nALGORITHM = "HS256"\n\ndef create_access_token(data: dict):\n    expire = datetime.utcnow() + timedelta(minutes=30)\n    to_encode = data.copy()\n    to_encode.update({"exp": expire})\n    return jwt.encode(to_encode, SECRET_KEY, ALGORITHM)\n\ndef verify_token(token: str):\n    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])\n    return payload</code></pre></div>` },
-            { id: 14, title: "OAuth2 with Password Flow", module: "Module 3", content: `<h2>OAuth2 Implementation</h2><div class="code-block"><div class="code-header"><span class="code-language">Python</span></div><pre><code>from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm\n\noauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")\n\n@app.post("/token")\ndef login(form_data: OAuth2PasswordRequestForm = Depends()):\n    user = authenticate_user(form_data.username, form_data.password)\n    if not user:\n        raise HTTPException(status_code=401)\n    token = create_access_token({"sub": user.email})\n    return {"access_token": token, "token_type": "bearer"}</code></pre></div>` },
-            { id: 15, title: "Protected Routes & Dependencies", module: "Module 3", content: `<h2>Protecting Endpoints</h2><div class="code-block"><div class="code-header"><span class="code-language">Python</span></div><pre><code>async def get_current_user(token: str = Depends(oauth2_scheme)):\n    try:\n        payload = verify_token(token)\n        email = payload.get("sub")\n        if email is None:\n            raise HTTPException(status_code=401)\n        return email\n    except JWTError:\n        raise HTTPException(status_code=401)\n\n@app.get("/me")\ndef read_users_me(current_user: str = Depends(get_current_user)):\n    return {"email": current_user}</code></pre></div>` },
-            { id: 16, title: "Role-Based Access Control (RBAC)", module: "Module 3", content: `<h2>User Roles & Permissions</h2><div class="code-block"><div class="code-header"><span class="code-language">Python</span></div><pre><code>def require_role(role: str):\n    def role_checker(current_user: User = Depends(get_current_user)):\n        if current_user.role != role:\n            raise HTTPException(status_code=403, detail="Not authorized")\n        return current_user\n    return role_checker\n\n@app.delete("/admin/users/{user_id}")\ndef delete_user(user_id: int, admin: User = Depends(require_role("admin"))):\n    # Only admins can access\n    return {"deleted": user_id}</code></pre></div>` },
-            { id: 17, title: "API Keys & Rate Limiting", module: "Module 3", hasQuiz: true, content: `<h2>API Security</h2><div class="code-block"><div class="code-header"><span class="code-language">Python</span></div><pre><code>from fastapi import Header\nfrom slowapi import Limiter, _rate_limit_exceeded_handler\n\nlimiter = Limiter(key_func=lambda: "global")\n\n@app.get("/api/data")\n@limiter.limit("5/minute")\ndef get_data(api_key: str = Header(...)):\n    if api_key not in valid_keys:\n        raise HTTPException(status_code=401)\n    return {"data": "secret"}</code></pre></div><h3>Module 3 Complete! 🎉</h3>` }
+        "id": 3,
+        "title": "Module 3: The Pantry (Database)",
+        "icon": "\ud83d\uddc4\ufe0f",
+        "description": "Connect your API to a real database using SQLModel (SQLAlchemy + Pydantic) to store data permanently.",
+        "lessons_data": [
+            {
+                "id": 11,
+                "title": "The Infinite Pantry (SQLModel)",
+                "module": "Module 3",
+                "story": "<h2>\ud83e\udd61 The Problem with RAM</h2>\n                    <p>So far, we've stored data in Python lists `items = []`. But when the restaurant (server) closes for the night (restarts), all that food disappears. We need a Pantry that persists\u2014a Database.</p>\n                    <p>Enter <strong>SQLModel</strong>. It's a library by the creator of FastAPI that combines SQLAlchemy (the SQL power) with Pydantic (validation).</p>",
+                "content": "<h2>Installation</h2>\n                    <div class=\"code-block\">\n                        <div class=\"code-header\">Terminal</div>\n                        <pre><code>pip install sqlmodel</code></pre>\n                    </div>\n\n                    <h3>Defining a Model (Table)</h3>\n                    <p>In SQLModel, a class defines BOTH the SQL Table and the Pydantic Model. It saves you writing code twice!</p>\n\n                    <div class=\"code-block\">\n                        <div class=\"code-header\">models.py</div>\n                        <pre><code>from typing import Optional\nfrom sqlmodel import Field, SQLModel\n\nclass Hero(SQLModel, table=True):\n    id: Optional[int] = Field(default=None, primary_key=True)\n    name: str\n    secret_name: str\n    age: Optional[int] = None</code></pre>\n                    </div>\n                    <ul>\n                        <li><code>table=True</code>: Tells SQLModel this is a database table.</li>\n                        <li><code>Field(primary_key=True)</code>: This is the unique ID for the row.</li>\n                    </ul>"
+            },
+            {
+                "id": 12,
+                "title": "Creating the Engine",
+                "module": "Module 3",
+                "story": "<h2>\ud83d\udd0c Connecting the Pipes</h2>\n                    <p>The <strong>Engine</strong> is the central connection to your database. It handles the actual communication (dialect, pooling connections).</p>\n                    <p>We'll use SQLite for now because it's like a portable pantry (a single file), but the code works for PostgreSQL (a giant warehouse) too.</p>",
+                "content": "<h2>Setting up the Database Connection</h2>\n                    <p>Create a `database.py` file to manage the connection.</p>\n\n                    <div class=\"code-block\">\n                        <div class=\"code-header\">database.py</div>\n                        <pre><code>from sqlmodel import SQLModel, create_engine\n\nsqlite_file_name = \"database.db\"\nsqlite_url = f\"sqlite:///{sqlite_file_name}\"\n\n# check_same_thread=False is needed only for SQLite\nengine = create_engine(sqlite_url, connect_args={\"check_same_thread\": False})\n\ndef create_db_and_tables():\n    SQLModel.metadata.create_all(engine)</code></pre>\n                    </div>\n\n                    <p>Call `create_db_and_tables()` when your app starts (e.g., in a startup event) to ensure tables exist.</p>"
+            },
+            {
+                "id": 13,
+                "title": "The Session (Dependency Injection)",
+                "module": "Module 3",
+                "story": "<h2>\ud83e\udd1d The Helper</h2>\n                     <p>You don't want every chef to run to the warehouse personally. You want a Helper (Session) who grabs the ingredients for this specific order and then closes the door.</p>\n                     <p>In FastAPI, we use <strong>Dependency Injection</strong> to give every request its own fresh Database Session.</p>",
+                "content": "<h2>Dependency Injection for DB Sessions</h2>\n                     <p>This is the \"Clean Architecture\" way to handle DB connections.</p>\n\n                     <div class=\"code-block\">\n                         <div class=\"code-header\">database.py</div>\n                         <pre><code>from sqlmodel import Session\n\ndef get_session():\n    with Session(engine) as session:\n        yield session</code></pre>\n                     </div>\n\n                     <h3>Using it in a Route</h3>\n                     <p>Now, any route can ask for a session:</p>\n                     <pre><code>from fastapi import Depends, FastAPI\nfrom sqlmodel import Session\nfrom .database import get_session\n\n@app.post(\"/heroes/\")\ndef create_hero(hero: Hero, session: Session = Depends(get_session)):\n    session.add(hero)\n    session.commit()\n    session.refresh(hero)\n    return hero</code></pre>\n                     \n                     <div class=\"tip-box\">\n                         <div class=\"box-title\">Why yield?</div>\n                         <p>The `yield` allows code to run <em>after</em> the route finishes (like closing the session). Dependency Injection handles setup and teardown automatically!</p>\n                     </div>"
+            },
+            {
+                "id": 14,
+                "title": "CRUD Operations",
+                "module": "Module 3",
+                "story": "<h2>\ud83d\udccb The Daily Routine</h2>\n                     <p>Every restaurant does 4 things: Accepts deliveries (Create), Checks inventory (Read), Updates the menu (Update), and throws out bad food (Delete). This is <strong>CRUD</strong>.</p>",
+                "content": "<h2>Reading Data (Select)</h2>\n                     <p>To read data, we use `select` statements.</p>\n\n                     <div class=\"code-block\">\n                         <div class=\"code-header\">main.py</div>\n                         <pre><code>from sqlmodel import select\n\n@app.get(\"/heroes/\")\ndef read_heroes(session: Session = Depends(get_session)):\n    heroes = session.exec(select(Hero)).all()\n    return heroes</code></pre>\n                     </div>\n\n                     <h2>Updating Data</h2>\n                     <pre><code>@app.patch(\"/heroes/{hero_id}\")\ndef update_hero(hero_id: int, hero_data: HeroUpdate, session: Session = Depends(get_session)):\n    hero_db = session.get(Hero, hero_id)\n    if not hero_db:\n        raise HTTPException(status_code=404, detail=\"Hero not found\")\n    \n    hero_data_dict = hero_data.dict(exclude_unset=True)\n    for key, value in hero_data_dict.items():\n        setattr(hero_db, key, value)\n        \n    session.add(hero_db)\n    session.commit()\n    session.refresh(hero_db)\n    return hero_db</code></pre>"
+            },
+            {
+                "id": 15,
+                "title": "Async Databases (Advanced)",
+                "module": "Module 3",
+                "story": "<h2>\u26a1 The Hyper-Speed Helper</h2>\n                     <p>Standard SQLModel/SQLAlchemy is synchronous (blocking). If the DB is slow, the server waits. For maximum performance, we want an <strong>Async</strong> Engine.</p>\n                     <p>This allows the server to handle other requests while waiting for the database to reply.</p>",
+                "content": "<h2>Async Engine Setup</h2>\n                     <p>You need to install an async driver like `aiosqlite` or `asyncpg`.</p>\n                     <pre><code>pip install aiosqlite</code></pre>\n                     \n                     <h3>Async Code</h3>\n                     <pre><code>from sqlalchemy.ext.asyncio import create_async_engine\nfrom sqlmodel.ext.asyncio.session import AsyncSession\n\nasync_engine = create_async_engine(\"sqlite+aiosqlite:///database.db\")\n\nasync def get_session() -> AsyncSession:\n    async with AsyncSession(async_engine) as session:\n        yield session</code></pre>\n\n                     <p>Now your detailed routes must use `await session.exec(...)`.</p>\n                     \n                     <div class=\"warning-box\">\n                         <div class=\"box-title\">Complexity Tradeoff</div>\n                         <p>Async SQL adds complexity. For many apps, standard synchronous SQL is plenty fast. Only optimize if you need to!</p>\n                     </div>"
+            }
         ]
     },
     {
-        id: 4,
-        title: "Module 4: Advanced Features",
-        icon: "🚀",
-        description: "File uploads, WebSockets, background tasks, and middleware",
-        lessons: 6,
-        duration: "3.5 hours",
-        lessons_data: [
-            { id: 18, title: "File Uploads & Download", module: "Module 4", content: `<h2>File Handling</h2><div class="code-block"><div class="code-header"><span class="code-language">Python</span></div><pre><code>from fastapi import File, UploadFile\n\n@app.post("/upload/")\nasync def upload_file(file: UploadFile = File(...)):\n    contents = await file.read()\n    with open(f"uploads/{file.filename}", "wb") as f:\n        f.write(contents)\n    return {"filename": file.filename, "size": len(contents)}</code></pre></div>` },
-            { id: 19, title: "WebSockets for Real-Time Communication", module: "Module 4", content: `<h2>WebSocket Connections</h2><div class="code-block"><div class="code-header"><span class="code-language">Python</span></div><pre><code>from fastapi import WebSocket\n\n@app.websocket("/ws")\nasync def websocket_endpoint(websocket: WebSocket):\n    await websocket.accept()\n    while True:\n        data = await websocket.receive_text()\n        await websocket.send_text(f"Echo: {data}")</code></pre></div>` },
-            { id: 20, title: "Background Tasks", module: "Module 4", content: `<h2>Async Background Jobs</h2><div class="code-block"><div class="code-header"><span class="code-language">Python</span></div><pre><code>from fastapi import BackgroundTasks\n\ndef send_email(email: str, message: str):\n    # Send email logic\n    print(f"Sending to {email}: {message}")\n\n@app.post("/send-notification/")\ndef notify(email: str, background_tasks: BackgroundTasks):\n    background_tasks.add_task(send_email, email, "Welcome!")\n    return {"message": "Notification queued"}</code></pre></div>` },
-            { id: 21, title: "Custom Middleware", module: "Module 4", content: `<h2>Request/Response Middleware</h2><div class="code-block"><div class="code-header"><span class="code-language">Python</span></div><pre><code>from starlette.middleware.base import BaseHTTPMiddleware\nimport time\n\nclass TimingMiddleware(BaseHTTPMiddleware):\n    async def dispatch(self, request, call_next):\n        start = time.time()\n        response = await call_next(request)\n        duration = time.time() - start\n        response.headers["X-Process-Time"] = str(duration)\n        return response\n\napp.add_middleware(TimingMiddleware)</code></pre></div>` },
-            { id: 22, title: "CORS & Headers", module: "Module 4", content: `<h2>Cross-Origin Requests</h2><div class="code-block"><div class="code-header"><span class="code-language">Python</span></div><pre><code>from fastapi.middleware.cors import CORSMiddleware\n\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=["*"],\n    allow_credentials=True,\n    allow_methods=["*"],\n    allow_headers=["*"]\n)</code></pre></div>` },
-            { id: 23, title: "Email Sending & Notifications", module: "Module 4", hasQuiz: true, content: `<h2>Email Integration</h2><div class="code-block"><div class="code-header"><span class="code-language">Python</span></div><pre><code>from fastapi_mail import FastMail, MessageSchema, ConnectionConfig\n\nconf = ConnectionConfig(\n    MAIL_USERNAME="your@email.com",\n    MAIL_FROM="your@email.com",\n    MAIL_PASSWORD="password",\n    MAIL_SERVER="smtp.gmail.com"\n)\n\n@app.post("/email/")\nasync def send_email(email: str):\n    message = MessageSchema(\n        subject="Welcome!",\n        recipients=[email],\n        body="Thanks for signing up!"\n    )\n    fm = FastMail(conf)\n    await fm.send_message(message)\n    return {"sent": True}</code></pre></div><h3>Module 4 Complete! 🎉</h3>` }
+        "id": 4,
+        "title": "Module 4: The VIP Area (Authentication)",
+        "icon": "\ud83d\udd10",
+        "description": "Secure your API with OAuth2 and JWT tokens. Learn how to hash passwords and protect routes.",
+        "lessons_data": [
+            {
+                "id": 16,
+                "title": "Security Concepts",
+                "module": "Module 4",
+                "story": "<h2>\ud83c\udf9f\ufe0f The Nightclub</h2>\n                     <p>You can't just let anyone into the VIP area. You need a system.</p>\n                     <ul>\n                        <li><strong>Identification:</strong> \"Who are you?\" (Username/Password).</li>\n                        <li><strong>Authentication:</strong> \"Prove it.\" (Checking password).</li>\n                        <li><strong>Authorization:</strong> \"Are you allowed in here?\" (Checking roles/scopes).</li>\n                     </ul>\n                     <p>FastAPI provides tools to build this securely using standard protocols like <strong>OAuth2</strong>.</p>",
+                "content": "<h2>OAuth2 Password Flow</h2>\n                     <p>This is the standard flow for logging into a web app:</p>\n                     <ol>\n                        <li>User sends username/password to `/token`.</li>\n                        <li>Server verifies and returns a <strong>Token</strong> (access_token).</li>\n                        <li>User sends this Token in the Header of all future requests (`Authorization: Bearer <token>`).</li>\n                     </ol>\n\n                     <h3>Setting up OAuth2</h3>\n                     <pre><code>from fastapi.security import OAuth2PasswordBearer\n\n# This tells FastAPI that the URL to get the token is /token\noauth2_scheme = OAuth2PasswordBearer(tokenUrl=\"token\")\n\n@app.get(\"/users/me\")\nasync def read_users_me(token: str = Depends(oauth2_scheme)):\n    return {\"token\": token}</code></pre>\n                     <p>If you call `/users/me` without a token, FastAPI automatically returns a 401 Unauthorized error.</p>"
+            },
+            {
+                "id": 17,
+                "title": "Hashing Passwords",
+                "module": "Module 4",
+                "story": "<h2>\ud83e\udd2b The Secret Recipe</h2>\n                     <p>Never store passwords in plain text! If hackers steal your DB, they have everything.</p>\n                     <p>Instead, we store a <strong>Hash</strong>. It's like turning a potato into mashed potatoes. You can't turn mashed potatoes back into a raw potato, but if you have a potato, you can mash it and see if it looks the same.</p>",
+                "content": "<h2>Using Passlib</h2>\n                     <p>We use `passlib` with `bcrypt` (a secure hashing algorithm).</p>\n                     <pre><code>pip install \"passlib[bcrypt]\"</code></pre>\n\n                     <h3>Hashing Logic</h3>\n                     <div class=\"code-block\">\n                        <div class=\"code-header\">security.py</div>\n                        <pre><code>from passlib.context import CryptContext\n\npwd_context = CryptContext(schemes=[\"bcrypt\"], deprecated=\"auto\")\n\ndef verify_password(plain_password, hashed_password):\n    return pwd_context.verify(plain_password, hashed_password)\n\ndef get_password_hash(password):\n    return pwd_context.hash(password)</code></pre>\n                     </div>"
+            },
+            {
+                "id": 18,
+                "title": "JWT Tokens (The Wristband)",
+                "module": "Module 4",
+                "story": "<h2>\ud83c\udfab The Wristband</h2>\n                     <p>Once you verify your ID at the door, the bouncer gives you a wristband. You don't show your ID at every single bar station; you just show the wristband.</p>\n                     <p>A <strong>JWT (JSON Web Token)</strong> is that wristband. It's a cryptographically signed string that proves who you are.</p>",
+                "content": "<h2>Creating JWTs</h2>\n                     <p>You need the `python-jose` library.</p>\n                     <pre><code>pip install \"python-jose[cryptography]\"</code></pre>\n\n                     <h3>Token Structure</h3>\n                     <p>A JWT has 3 parts: Header, Payload (Data), and Signature.</p>\n                     <pre><code>from jose import jwt\nfrom datetime import datetime, timedelta\n\nSECRET_KEY = \"mysecretkey\"\nALGORITHM = \"HS256\"\n\ndef create_access_token(data: dict):\n    to_encode = data.copy()\n    expire = datetime.utcnow() + timedelta(minutes=30)\n    to_encode.update({\"exp\": expire})\n    encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)\n    return encoded_jwt</code></pre>"
+            },
+            {
+                "id": 19,
+                "title": "The Login Endpoint",
+                "module": "Module 4",
+                "story": "<h2>\ud83d\udd11 The Front Door</h2>\n                     <p>This is where the user exchanges their credentials for the JWT.</p>",
+                "content": "<h2>Implementing /token</h2>\n                     <p>FastAPI has a strict spec for this form data called `OAuth2PasswordRequestForm`.</p>\n\n                     <pre><code>from fastapi.security import OAuth2PasswordRequestForm\n\n@app.post(\"/token\")\nasync def login(form_data: OAuth2PasswordRequestForm = Depends()):\n    # 1. Verify user exists and password is correct\n    user = authenticate_user(fake_users_db, form_data.username, form_data.password)\n    if not user:\n        raise HTTPException(status_code=400, detail=\"Incorrect username or password\")\n    \n    # 2. Create JWT\n    access_token = create_access_token(data={\"sub\": user.username})\n    \n    # 3. Return it\n    return {\"access_token\": access_token, \"token_type\": \"bearer\"}</code></pre>"
+            },
+            {
+                "id": 20,
+                "title": "Protecting Routes (Get Current User)",
+                "module": "Module 4",
+                "story": "<h2>\ud83d\udd75\ufe0f\u200d\u2642\ufe0f The Identity Check</h2>\n                     <p>Now we want to know <em>who</em> is making the request in our protected routes.</p>\n                     <p>We create a dependency `get_current_user` that takes the token, decodes it, finds the user, and returns the User object.</p>",
+                "content": "<h2>The Get Current User Dependency</h2>\n                     <pre><code>async def get_current_user(token: str = Depends(oauth2_scheme)):\n    try:\n        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])\n        username: str = payload.get(\"sub\")\n        if username is None:\n            raise credentials_exception\n    except JWTError:\n        raise credentials_exception\n        \n    user = get_user(fake_users_db, username=username)\n    return user</code></pre>\n\n                     <h3>Using it</h3>\n                     <pre><code>@app.get(\"/users/me\")\nasync def read_users_me(current_user: User = Depends(get_current_user)):\n    return current_user</code></pre>\n                     \n                     <p>Now, inside `read_users_me`, you have the full `current_user` object effectively \"injected\" into your function!</p>"
+            }
         ]
     },
     {
-        id: 5,
-        title: "Module 5: Testing & Documentation",
-        icon: "🧪",
-        description: "Write tests, generate docs, and ensure code quality",
-        lessons: 5,
-        duration: "2.5 hours",
-        lessons_data: [
-            { id: 24, title: "Unit Testing with Pytest", module: "Module 5", content: `<h2>Testing FastAPI</h2><div class="code-block"><div class="code-header"><span class="code-language">Python</span></div><pre><code>from fastapi.testclient import TestClient\nfrom main import app\n\nclient = TestClient(app)\n\ndef test_read_main():\n    response = client.get("/")\n    assert response.status_code == 200\n    assert response.json() == {"message": "Hello"}</code></pre></div>` },
-            { id: 25, title: "Integration Testing APIs", module: "Module 5", content: `<h2>Full API Tests</h2><div class="code-block"><div class="code-header"><span class="code-language">Python</span></div><pre><code>def test_create_user():\n    response = client.post("/users/", json={\n        "email": "test@example.com",\n        "password": "secret123"\n    })\n    assert response.status_code == 201\n    assert "id" in response.json()</code></pre></div>` },
-            { id: 26, title: "Test Coverage & Mocking", module: "Module 5", content: `<h2>Code Coverage</h2><div class="code-block"><div class="code-header"><span class="code-language">Terminal</span></div><pre><code>pip install pytest-cov\npytest --cov=app tests/\n\n# Generate HTML report\npytest --cov=app --cov-report=html tests/</code></pre></div>` },
-            { id: 27, title: "Custom OpenAPI Documentation", module: "Module 5", content: `<h2>Customize Docs</h2><div class="code-block"><div class="code-header"><span class="code-language">Python</span></div><pre><code>app = FastAPI(\n    title="My API",\n    description="Awesome API docs",\n    version="1.0.0",\n    docs_url="/documentation",\n    redoc_url="/redoc"\n)</code></pre></div>` },
-            { id: 28, title: "API Versioning", module: "Module 5", hasQuiz: true, content: `<h2>Version Control</h2><div class="code-block"><div class="code-header"><span class="code-language">Python</span></div><pre><code>from fastapi import APIRouter\n\nv1 = APIRouter(prefix="/api/v1")\nv2 = APIRouter(prefix="/api/v2")\n\n@v1.get("/users")\ndef get_users_v1():\n    return {"version": 1, "users": []}\n\n@v2.get("/users")\ndef get_users_v2():\n    return {"version": 2, "users": [], "total": 0}\n\napp.include_router(v1)\napp.include_router(v2)</code></pre></div><h3>Module 5 Complete! 🎉</h3>` }
+        "id": 5,
+        "title": "Module 5: Connecting the Dots (Relationships)",
+        "icon": "\ud83d\udd17",
+        "description": "Learn how to link data together: One-to-Many, Many-to-Many, and how to query related data efficiently.",
+        "lessons_data": [
+            {
+                "id": 21,
+                "title": "The Network (Foreign Keys)",
+                "module": "Module 5",
+                "story": "<h2>\ud83d\udd78\ufe0f The Web of Data</h2>\n                     <p>Data rarely lives alone. A User has many Tweets. A Tweet has many Likes. A Like belongs to one User.</p>\n                     <p>We connect tables using <strong>Foreign Keys</strong>. Think of it like a reference pointer: \"See attached file #123\".</p>",
+                "content": "<h2>One-to-Many Relationship</h2>\n                     <p>Let's say one `Team` has many `Heroes`.</p>\n\n                     <div class=\"code-block\">\n                        <div class=\"code-header\">models.py</div>\n                        <pre><code>class Team(SQLModel, table=True):\n    id: Optional[int] = Field(default=None, primary_key=True)\n    name: str\n    headquarters: str\n\n    # Relationship back to heroes\n    heroes: list[\"Hero\"] = Relationship(back_populates=\"team\")\n\nclass Hero(SQLModel, table=True):\n    id: Optional[int] = Field(default=None, primary_key=True)\n    name: str\n    \n    # The Foreign Key\n    team_id: Optional[int] = Field(default=None, foreign_key=\"team.id\")\n    \n    # Relationship to the Team object\n    team: Optional[Team] = Relationship(back_populates=\"heroes\")</code></pre>\n                     </div>\n\n                     <ul>\n                        <li><code>foreign_key=\"team.id\"</code>: This column stores the ID (integer).</li>\n                        <li><code>Relationship(...)</code>: This is a magic attribute. When you access `hero.team`, SQLModel fetches the Team object automatically.</li>\n                     </ul>"
+            },
+            {
+                "id": 22,
+                "title": "Creating Related Data",
+                "module": "Module 5",
+                "story": "<h2>\ud83d\udce6 The Package Deal</h2>\n                     <p>When you create a Hero, you can assign them to a Team immediately.</p>",
+                "content": "<h2>Assigning Relationships</h2>\n                     <pre><code>def create_hero(session: Session):\n    team_preventers = Team(name=\"Preventers\", headquarters=\"Sharp Tower\")\n    hero_deadpond = Hero(name=\"Deadpond\", team=team_preventers)\n    \n    session.add(hero_deadpond)\n    # Note: We didn't add team_preventers explicitly!\n    # SQLModel forces the creation of the team because it's linked.\n    \n    session.commit()</code></pre>\n\n                     <h3>Reading Related Data</h3>\n                     <p>FastAPI/SQLModel supports \"Lazy Loading\" by default, but for async, we often use \"Read with Links\".</p>\n                     <p>If you access `hero.team`, SQLModel performs a SELECT query behind the scenes to fetch the team.</p>"
+            },
+            {
+                "id": 23,
+                "title": "Querying with Joins",
+                "module": "Module 5",
+                "story": "<h2>\ud83d\udd0d The Detective</h2>\n                     <p>Sometimes you want to ask complex questions: \"Give me all Heroes who are in a Team based in New York\".</p>\n                     <p>To do this efficiently (in one query instead of 50), we use <strong>JOINs</strong>.</p>",
+                "content": "<h2>Selecting with Joins</h2>\n                     <pre><code>statement = select(Hero, Team).where(Hero.team_id == Team.id)\nresults = session.exec(statement).all()\n\nfor hero, team in results:\n    print(f\"Hero: {hero.name}, Team: {team.name}\")</code></pre>\n                    \n                     <h3>Left Outer Joins</h3>\n                     <p>If you want ALL heroes, even those without a team:</p>\n                     <pre><code>statement = select(Hero, Team).join(Team, isouter=True)</code></pre>"
+            },
+            {
+                "id": 24,
+                "title": "Many-to-Many Relationships",
+                "module": "Module 5",
+                "story": "<h2>\ud83e\udd1d The Collaboration</h2>\n                     <p>Sometimes relationships are complex. A Hero can learn many Skills. A Skill can be learned by many Heroes.</p>\n                     <p>This is a <strong>Many-to-Many</strong> relationship. It requires a neutral third party: The <strong>Link Table</strong>.</p>",
+                "content": "<h2>The Link Model</h2>\n                     <pre><code>class HeroSkillLink(SQLModel, table=True):\n    hero_id: Optional[int] = Field(default=None, foreign_key=\"hero.id\", primary_key=True)\n    skill_id: Optional[int] = Field(default=None, foreign_key=\"skill.id\", primary_key=True)</code></pre>\n\n                     <h3>Updating the Models</h3>\n                     <pre><code>class Hero(SQLModel, table=True):\n    ...\n    skills: list[\"Skill\"] = Relationship(back_populates=\"heroes\", link_model=HeroSkillLink)\n\nclass Skill(SQLModel, table=True):\n    ...\n    heroes: list[\"Hero\"] = Relationship(back_populates=\"skills\", link_model=HeroSkillLink)</code></pre>"
+            },
+            {
+                "id": 25,
+                "title": "Cascades & Orphan Data",
+                "module": "Module 5",
+                "story": "<h2>\ud83e\uddf9 The Cleanup Crew</h2>\n                     <p>Unless you specify otherwise, deleting a Team might leave Heroes pointing to a non-existent team ID (Database Error!).</p>\n                     <p>We configure <strong>Cascades</strong> to tell the database: \"If the Team is deleted, delete the Heroes too\" OR \"Set their team_id to NULL\".</p>",
+                "content": "<h2>configuring Cascades</h2>\n                     <p>In SQLAlchemy (under the hood):</p>\n                     <pre><code>team: Optional[Team] = Relationship(\n    back_populates=\"heroes\", \n    sa_relationship_kwargs={\"cascade\": \"all, delete\"}\n)</code></pre>\n                     <p>Use with caution! `delete` means literal deletion of the child records.</p>"
+            }
         ]
     },
     {
-        id: 6,
-        title: "Module 6: Deployment & Production",
-        icon: "☁️",
-        description: "Deploy to production with Docker, CI/CD, monitoring, and scaling",
-        lessons: 4,
-        duration: "3 hours",
-        lessons_data: [
-            { id: 29, title: "Docker & Docker Compose", module: "Module 6", content: `<h2>Containerization</h2><div class="code-block"><div class="code-header"><span class="code-language">Dockerfile</span></div><pre><code>FROM python:3.11\nWORKDIR /app\nCOPY requirements.txt .\nRUN pip install -r requirements.txt\nCOPY . .\nCMD ["uvicorn", "main:app", "--host", "0.0.0.0"]</code></pre></div><div class="code-block"><div class="code-header"><span class="code-language">docker-compose.yml</span></div><pre><code>version: '3.8'\nservices:\n  web:\n    build: .\n    ports:\n      - "8000:8000"\n  db:\n    image: postgres:15\n    environment:\n      POSTGRES_PASSWORD: secret</code></pre></div>` },
-            { id: 30, title: "Deploy to AWS/GCP/Heroku", module: "Module 6", content: `<h2>Cloud Deployment</h2><div class="tip-box"><div class="box-title">☁️ Deployment Options</div><ul><li><strong>AWS:</strong> Elastic Beanstalk, ECS, Lambda</li><li><strong>GCP:</strong> Cloud Run, App Engine</li><li><strong>Heroku:</strong> Git push deployment</li><li><strong>DigitalOcean:</strong> App Platform</li></ul></div><div class="code-block"><div class="code-header"><span class="code-language">Heroku Deployment</span></div><pre><code># Procfile\nweb: uvicorn main:app --host 0.0.0.0 --port $PORT\n\n# Deploy\nheroku create my-fastapi-app\ngit push heroku main</code></pre></div>` },
-            { id: 31, title: "CI/CD with GitHub Actions", module: "Module 6", content: `<h2>Automated Deployment</h2><div class="code-block"><div class="code-header"><span class="code-language">.github/workflows/deploy.yml</span></div><pre><code>name: Deploy\non:\n  push:\n    branches: [main]\njobs:\n  test:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v2\n      - name: Run tests\n        run: |\n          pip install -r requirements.txt\n          pytest\n  deploy:\n    needs: test\n    runs-on: ubuntu-latest\n    steps:\n      - name: Deploy to production\n        run: echo "Deploying..."</code></pre></div>` },
-            { id: 32, title: "Monitoring, Logging & Performance", module: "Module 6", hasQuiz: true, content: `<h2>Production Monitoring</h2><div class="code-block"><div class="code-header"><span class="code-language">Python</span></div><pre><code>import logging\nfrom prometheus_fastapi_instrumentator import Instrumentator\n\n# Logging\nlogging.basicConfig(level=logging.INFO)\nlogger = logging.getLogger(__name__)\n\n@app.get("/")\ndef root():\n    logger.info("Root endpoint accessed")\n    return {"status": "ok"}\n\n# Prometheus metrics\nInstrumentator().instrument(app).expose(app)</code></pre></div><h3>Module 6 Complete! 🎉</h3>` }
+        "id": 6,
+        "title": "Module 6: The Inspection (Testing)",
+        "icon": "\ud83e\uddea",
+        "description": "Write automated tests using Pytest and TestClient directly from FastAPI to ensure your kitchen produces perfect dishes every time.",
+        "lessons_data": [
+            {
+                "id": 26,
+                "title": "Intro to Testing",
+                "module": "Module 6",
+                "story": "<h2>\ud83e\udd16 The Robot Taster</h2>\n                     <p>Imagine having a robot that tastes every single dish on the menu in 1 second before you open the restaurant. That's <strong>Automated Testing</strong>.</p>\n                     <p>If you change the soup recipe, the robot instantly tells you: \"Too salty!\". This gives you confidence to refactor code.</p>",
+                "content": "<h2>Setup Pytest</h2>\n                     <pre><code>pip install pytest httpx</code></pre>\n\n                     <h3>Writing a Test</h3>\n                     <p>Create `test_main.py`:</p>\n                     <pre><code>def test_math():\n    assert 1 + 1 == 2</code></pre>\n\n                     <p>Run it with just `pytest`.</p>"
+            },
+            {
+                "id": 27,
+                "title": "The TestClient",
+                "module": "Module 6",
+                "story": "<h2>\ud83d\udd75\ufe0f\u200d\u2642\ufe0f The Mystery Shopper</h2>\n                     <p>FastAPI provides a `TestClient`. It pretends to be a real web browser sending requests to your API. It doesn't even need to start the Uvicorn server!</p>",
+                "content": "<h2>Using TestClient</h2>\n                     <pre><code>from fastapi.testclient import TestClient\nfrom main import app\n\nclient = TestClient(app)\n\ndef test_read_main():\n    response = client.get(\"/\")\n    assert response.status_code == 200\n    assert response.json() == {\"message\": \"Hello World\"}</code></pre>\n\n                     <p>This runs your actual API code instantly.</p>"
+            },
+            {
+                "id": 28,
+                "title": "Testing Databases (Fixtures)",
+                "module": "Module 6",
+                "story": "<h2>\ud83c\udfad The Stunt Double</h2>\n                     <p>You shouldn't run tests on your Production Database! You might delete real users!</p>\n                     <p>We use <strong>Fixtures</strong> to create a fresh, empty database for every test. Often we use SQLite in-memory mode for speed.</p>",
+                "content": "<h2>Pytest Fixtures</h2>\n                     <pre><code>import pytest\nfrom sqlmodel import Session, SQLModel, create_engine\n\n# Use in-memory SQLite\nengine = create_engine(\"sqlite://\")\n\n@pytest.fixture(name=\"session\")\ndef session_fixture():\n    SQLModel.metadata.create_all(engine)\n    with Session(engine) as session:\n        yield session\n    SQLModel.metadata.drop_all(engine)</code></pre>\n\n                     <p>Now pass `session` to your test functions.</p>"
+            },
+            {
+                "id": 29,
+                "title": "Overriding Dependencies",
+                "module": "Module 6",
+                "story": "<h2>\ud83c\udfad The Mask</h2>\n                     <p>Your API uses `get_session` to connect to the real DB file. During testing, we want to force it to use our test DB fixture.</p>\n                     <p>FastAPI allows <strong>Dependency Overrides</strong>.</p>",
+                "content": "<h2>app.dependency_overrides</h2>\n                     <pre><code>from main import app, get_session\n\ndef test_create_hero(session: Session):\n    def get_session_override():\n        return session\n\n    app.dependency_overrides[get_session] = get_session_override\n    \n    client = TestClient(app)\n    response = client.post(\"/heroes/\", json={\"name\": \"Test Hero\"})\n    \n    app.dependency_overrides.clear()\n    \n    assert response.status_code == 200</code></pre>"
+            },
+            {
+                "id": 30,
+                "title": "Test Coverage",
+                "module": "Module 6",
+                "story": "<h2>\ud83d\udcca The Report Card</h2>\n                     <p>How do you know if you tested everything? <strong>Coverage</strong> tools analyze which lines of code were executed during tests.</p>",
+                "content": "<h2>Running Coverage</h2>\n                     <pre><code>pip install pytest-cov\npytest --cov=app</code></pre>\n\n                     <p>Aim for high coverage, but remember: 100% coverage doesn't mean 0 bugs. It just means your tests ran every line.</p>"
+            }
         ]
     },
     {
-        id: 7,
-        title: "Module 7: Real-World Projects",
-        icon: "💼",
-        description: "Build complete production-ready applications",
-        lessons: 3,
-        duration: "5 hours",
-        lessons_data: [
-            { id: 33, title: "Project 1: Blog API with Auth", module: "Module 7", content: `<h2>Complete Blog API</h2><p>Build a full-featured blog with:</p><ul><li>✅ User authentication (JWT)</li><li>✅ CRUD for posts & comments</li><li>✅ Categories and tags</li><li>✅ File uploads for images</li><li>✅ Pagination & search</li></ul><div class="code-block"><div class="code-header"><span class="code-language">Key Endpoints</span></div><pre><code>POST /auth/register\nPOST /auth/login\nGET /posts?page=1&limit=10\nPOST /posts\nGET /posts/{post_id}\nDELETE /posts/{post_id}\nPOST /posts/{post_id}/comments</code></pre></div>` },
-            { id: 34, title: "Project 2: E-commerce Backend", module: "Module 7", content: `<h2>E-commerce API</h2><p>Build a complete shopping platform:</p><ul><li>✅ Product catalog with search</li><li>✅ Shopping cart management</li><li>✅ Order processing</li><li>✅ Payment integration</li><li>✅ Inventory tracking</li></ul><div class="code-block"><div class="code-header"><span class="code-language">Core Features</span></div><pre><code>GET /products?category=electronics\nPOST /cart/add\nPOST /orders/checkout\nGET /orders/{order_id}\nPOST /payments/process</code></pre></div>` },
-            { id: 35, title: "Project 3: Real-Time Chat Application", module: "Module 7", hasQuiz: true, content: `<h2>Real-Time Chat App</h2><p>Build a chat application with:</p><ul><li>✅ WebSocket connections</li><li>✅ Real-time messaging</li><li>✅ Chat rooms</li><li>✅ User presence</li><li>✅ Message history</li></ul><div class="code-block"><div class="code-header"><span class="code-language">Python</span></div><pre><code>class ConnectionManager:\n    def __init__(self):\n        self.active_connections = []\n    \n    async def connect(self, websocket):\n        await websocket.accept()\n        self.active_connections.append(websocket)\n    \n    async def broadcast(self, message):\n        for connection in self.active_connections:\n            await connection.send_text(message)\n\nmanager = ConnectionManager()\n\n@app.websocket("/ws/{client_id}")\nasync def chat(websocket: WebSocket, client_id: str):\n    await manager.connect(websocket)\n    while True:\n        data = await websocket.receive_text()\n        await manager.broadcast(f"{client_id}: {data}")</code></pre></div><h3>🎉 CONGRATULATIONS! 🎉</h3><p>You completed the entire FastAPI Masterclass!</p><p>You can now build production-ready backends!</p>` }
+        "id": 7,
+        "title": "Module 7: The Grand Opening (Deployment)",
+        "icon": "\ud83d\ude80",
+        "description": "Prepare your kitchen for the world! Learn Docker, Gunicorn, and how to deploy your FastAPI app to the cloud.",
+        "lessons_data": [
+            {
+                "id": 31,
+                "title": "The Shipping Container (Docker)",
+                "module": "Module 7",
+                "story": "<h2>\ud83d\ude9a The Magic Box</h2>\n                     <p>Imagine if you could ship your entire kitchen (stoves, chefs, pantry) inside a magical shipping container. When it arrives at any location in the world, you just open it, and it works exactly the same.</p>\n                     <p>This is <strong>Docker</strong>. It packages your code and all its dependencies (OS, libraries) into a standard unit.</p>",
+                "content": "<h2>Why Docker?</h2>\n                     <ul>\n                        <li><strong>Standardization:</strong> \"It works on my machine\" becomes \"It works everywhere\".</li>\n                        <li><strong>Isolation:</strong> Each app runs in its own container, not affecting the host OS.</li>\n                     </ul>\n\n                     <h3>Installing Docker</h3>\n                     <p>Download Docker Desktop for Mac/Windows from <a href=\"https://www.docker.com/\" target=\"_blank\">Docker.com</a>.</p>"
+            },
+            {
+                "id": 32,
+                "title": "The Recipe (Dockerfile)",
+                "module": "Module 7",
+                "story": "<h2>\ud83d\udcdc The Master Recipe</h2>\n                     <p>A Dockerfile is the exact set of instructions to build your container image. \"Start with Python 3.9. Add these requirements. Copy our code. Run this command.\"</p>",
+                "content": "<h2>Writing a Dockerfile</h2>\n                     <p>Create a file named `Dockerfile` (no extension):</p>\n\n                     <pre><code>\n# 1. Base Image (The OS + Python)\nFROM python:3.9-slim\n\n# 2. Set Working Directory\nWORKDIR /app\n\n# 3. Copy Requirements first (for caching)\nCOPY requirements.txt .\n\n# 4. Install Dependencies\nRUN pip install --no-cache-dir -r requirements.txt\n\n# 5. Copy Application Code\nCOPY . .\n\n# 6. Command to Run\nCMD [\"uvicorn\", \"main:app\", \"--host\", \"0.0.0.0\", \"--port\", \"80\"]\n                     </code></pre>\n                     \n                     <h3>Building It</h3>\n                     <pre><code>docker build -t my-fastapi-app .</code></pre>\n                     \n                     <h3>Running It</h3>\n                     <pre><code>docker run -d -p 80:80 my-fastapi-app</code></pre>"
+            },
+            {
+                "id": 33,
+                "title": "Orchestration (Docker Compose)",
+                "module": "Module 7",
+                "story": "<h2>\ud83c\udfb6 The Conductor</h2>\n                     <p>Your app rarely runs alone. It needs a Database. Maybe a Cache (Redis). Managing multiple containers manually is hard.</p>\n                     <p><strong>Docker Compose</strong> lets us define multi-container applications in a simple YAML file.</p>",
+                "content": "<h2>docker-compose.yml</h2>\n                     <pre><code>version: \"3.8\"\nservices:\n  web:\n    build: .\n    ports:\n      - \"8000:80\"\n    depends_on:\n      - db\n      \n  db:\n    image: postgres:13\n    environment:\n      POSTGRES_USER: user\n      POSTGRES_PASSWORD: password\n      POSTGRES_DB: db</code></pre>\n\n                     <h3>Run Everything</h3>\n                     <pre><code>docker-compose up -d</code></pre>"
+            },
+            {
+                "id": 34,
+                "title": "Production Server (Gunicorn)",
+                "module": "Module 7",
+                "story": "<h2>\ud83c\udfed The Factory Manager</h2>\n                     <p>Uvicorn is great, but it's a single worker. In production, we want a Manager who spawns multiple workers to handle heavy traffic.</p>\n                     <p>We use <strong>Gunicorn</strong> (the Manager) to manage Uvicorn (the Worker).</p>",
+                "content": "<h2>Running with Gunicorn</h2>\n                     <p>Install it first:</p>\n                     <pre><code>pip install gunicorn</code></pre>\n\n                     <h3>The Command</h3>\n                     <pre><code>gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app</code></pre>\n                     <ul>\n                        <li><code>-w 4</code>: Use 4 worker processes.</li>\n                        <li><code>-k ...</code>: Use the Uvicorn worker class (async compatible).</li>\n                     </ul>\n                     <p>Update your Dockerfile CMD to use this!</p>"
+            },
+            {
+                "id": 35,
+                "title": "Cloud Deployment",
+                "module": "Module 7",
+                "story": "<h2>\u26c5 Into the Clouds</h2>\n                     <p>Now that your container is ready, you can deploy it anywhere that runs Docker.</p>",
+                "content": "<h2>Free Tier Options</h2>\n                     <ul>\n                        <li><strong>Render.com:</strong> Easiest for Docker/Python. Just link your GitHub repo.</li>\n                        <li><strong>Railway.app:</strong> Great for full stack (Frontend + Backend + DB).</li>\n                        <li><strong>Fly.io:</strong> Optimizes for global distribution.</li>\n                     </ul>\n\n                     <h3>Steps (Render)</h3>\n                     <ol>\n                        <li>Push code to GitHub.</li>\n                        <li>Go to Dashboard > New Web Service.</li>\n                        <li>Select Repo.</li>\n                        <li>Choose Docker Environment.</li>\n                        <li>Deploy! \ud83d\ude80</li>\n                     </ol>"
+            }
         ]
     }
 ];
 
-// Copy application logic from app.js but adapted for backend curriculum
-let currentLesson = null;
+// ============================================
+// APPLICATION LOGIC
+// ============================================
+
 let completedLessons = new Set(JSON.parse(localStorage.getItem('backendCompletedLessons') || '[]'));
 let currentTheme = localStorage.getItem('theme') || 'dark';
 
@@ -729,3 +551,4 @@ function getAllLessons() {
     });
     return all;
 }
+
